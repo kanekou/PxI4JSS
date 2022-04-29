@@ -2,7 +2,7 @@
 
 Is is automatically generating Ising models from Petri nets for [Job Shop Scheduling Problem(JSS)](https://en.wikipedia.org/wiki/Job-shop_scheduling).
 
-By importing a JSS Petri Net model created by a proprietary tool ([CPN Tools](https://cpntools.org/)), the model is automatically converted to an Ising Model. After that, The solver(PyQUBO Simulated Annealier) calculates the solution.
+By importing a JSS(Single Resource Type) Petri Net model created by a proprietary tool ([CPN Tools](https://cpntools.org/)), the model is automatically converted to an Ising Model. After that, The solver(PyQUBO Simulated Annealier) calculates the solution.
 
 ![job4_exp](/images/job4_exp.jpg)
 
@@ -18,10 +18,6 @@ As a result, modeling is possible with domain knowledge only.
 As an approach, we developed a tool that models using [Petri nets](https://en.wikipedia.org/wiki/Petri_net) and automatically generates Ising models from them.
 Petri nets are effective bipartite graphs, the property that formulas can be generated from diagrams.
 Therefore, modeling graphically with Petri nets makes it easy to formulate without formulating equations.
-
-<!-- ## What is JSS?
-
-JSS is an optimization problem that seeks a schedule that minimizes the cost of processing multiple jobs consisting of multiple tasks. -->
 
 ## Usage
 
@@ -48,6 +44,7 @@ snakes_net = cpntools4py.to_snakes(cpn)
 # Generating ising model and solving it.
 res = pxi4jss.main(snakes_net)
 
+# Solution
 print(res['solution']['energy'])
 # => 0
 print(res['solution']['end_time'])
@@ -69,6 +66,8 @@ E.g.) Jobs = 4, Each Task = 4, Resources = 3
 
 ### Petri Net and JSS Mapping
 
+![jss_job4_colored](/images/jss_job4_colored.jpg)
+
 - Transitions: Task
 
   - Fires when a machine processes a task and stops firing when it finishes.
@@ -77,17 +76,20 @@ E.g.) Jobs = 4, Each Task = 4, Resources = 3
 
   - It is divided into `task place` and `resource place`.
 
-- Task place: with a plain token
+- Task place: with a place token
 
   - Place token: Job processing status
+
+    **No need to configure in this package.**
 
 - Resource place: with a resource place token
 
   - Resource place token: Machine actually used
 
-<!-- TODO -->
+## References
 
-## API references
+- https://pyqubo.readthedocs.io/en/latest/
+- https://github.com/fpom/snakes
 
 ## License
 
