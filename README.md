@@ -4,7 +4,7 @@ Is is automatically generating Ising models from Petri nets for [Job Shop Schedu
 
 By importing a JSS Petri Net model created by a proprietary tool ([CPN Tools](https://cpntools.org/)), the model is automatically converted to an Ising Model. After that, The solver(PyQUBO Simulated Annealier) calculates the solution.
 
-<!-- job4_exp.pdf here -->
+![job4_exp](/images/job4_exp.jpg)
 
 ## Why did we create this tool?
 
@@ -65,7 +65,7 @@ By drawing the figure below, we can extract the problem structure from the Petri
 
 E.g.) Jobs = 4, Each Task = 4, Resources = 3
 
-<!-- jss_job4.pdf here-->
+![jss_job4](/images/jss_job4.jpg)
 
 ### Petri Net and JSS Mapping
 
