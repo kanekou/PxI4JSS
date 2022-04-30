@@ -98,6 +98,7 @@ E.g.) Jobs = 4, Each Task = 4, Resources = 3
 - Transitions: Task
 
   - Fires when a machine processes a task and stops firing when it finishes.
+  - The firing time is set for each task as `processing time`.
 
 - Place: Representation of system state and required resources.
 
