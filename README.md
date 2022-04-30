@@ -36,7 +36,7 @@ import pxi4jss
 import cpntools4py
 
 # Read petrinet created by CPN Tools
-xml_path = '../inputs/jss_template.xml'
+xml_path = '../inputs/jss_job4.xml'
 xml_doc = cpntools4py.read_xml(xml_path)
 cpn = cpntools4py.CPN(xml_doc)
 # To snakes objects
@@ -46,17 +46,17 @@ res = pxi4jss.main(snakes_net)
 
 # Solution
 print(res['solution']['energy'])
-# => 0
+# => 0.0
 print(res['solution']['end_time'])
-# => 18
-print(res['topology']['jobs'])
+# => 23
+print(res['topology']['jobs']) # key: job, value: task
 # =>
 # {0: ['t0', 't1', 't2', 't3'],
 #  1: ['t4', 't5', 't6', 't7'],
 #  2: ['t8', 't9', 't10', 't11']}
 ```
 
-## How JSS is represented in Petri Net by CPN Tools
+## How JSS is represented in Petri Net by CPN Tools?
 
 By drawing the figure below, we can extract the problem structure from the Petri net.
 
