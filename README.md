@@ -2,6 +2,8 @@
 
 Is is automatically generating Ising models from Petri nets for [Job Shop Scheduling Problem(JSS)](https://en.wikipedia.org/wiki/Job-shop_scheduling).
 
+## Overview
+
 By importing a JSS(Single Resource Type) Petri Net model created by a proprietary tool ([CPN Tools](https://cpntools.org/)), the model is automatically converted to an Ising Model. After that, The solver(PyQUBO Simulated Annealier) calculates the solution.
 
 ![job4_exp](/images/job4_exp.jpg)
@@ -18,6 +20,14 @@ As a result, modeling is possible with domain knowledge only.
 As an approach, we developed a tool that models using [Petri nets](https://en.wikipedia.org/wiki/Petri_net) and automatically generates Ising models from them.
 Petri nets are effective bipartite graphs, the property that formulas can be generated from diagrams.
 Therefore, modeling graphically with Petri nets makes it easy to formulate without formulating equations.
+
+## Getting Started
+
+Installing
+
+```zsh
+% pip install pxi4jss
+```
 
 ## Usage
 
@@ -56,9 +66,26 @@ print(res['topology']['jobs']) # key: job, value: task
 #  2: ['t8', 't9', 't10', 't11']}
 ```
 
+## Prerequisites
+
+- Python :: 3.x
+
+  We have already confirmed the operation of version `3.7`.
+  Other versions are also expected to work, but we have not been able to confirm.
+
+## Versioning
+
+We use pypi for versioning. For the versions available, see the tags on this repository.
+
+## Running the tests
+
+```python
+% python3 -m unittest
+```
+
 ## How JSS is represented in Petri Net by CPN Tools?
 
-By drawing the figure below, we can extract the problem structure from the Petri net.
+By drawing the figure below, this package can extract the problem structure from the Petri net.
 
 E.g.) Jobs = 4, Each Task = 4, Resources = 3
 
@@ -90,6 +117,10 @@ E.g.) Jobs = 4, Each Task = 4, Resources = 3
 
 - https://pyqubo.readthedocs.io/en/latest/
 - https://github.com/fpom/snakes
+
+## Contributing
+
+Welcome!
 
 ## License
 
