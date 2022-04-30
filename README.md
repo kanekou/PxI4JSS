@@ -39,7 +39,7 @@ Please see above figure.
 
 ### Input xml Example
 
-Simple example. In detail, notebook example here.
+Simple example. In detail, [notebook example here](https://github.com/kanekou/PxI4JSS/blob/main/example/example.ipynb).
 
 ```python
 import pxi4jss
