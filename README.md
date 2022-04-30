@@ -4,7 +4,7 @@ Is is automatically generating Ising models from Petri nets for [Job Shop Schedu
 
 ## Overview
 
-By importing a JSS(Single Resource Type) Petri Net model created by a proprietary tool ([CPN Tools](https://cpntools.org/)), the model is automatically converted to an Ising Model. After that, The solver(PyQUBO Simulated Annealier) calculates the solution.
+By importing a JSS(Single Resource Type) Petri nets model created by a proprietary tool ([CPN Tools](https://cpntools.org/)), the model is automatically converted to an Ising Model. After that, The solver(PyQUBO Simulated Annealier) calculates the solution.
 
 ![job4_exp](/images/job4_exp.jpg)
 
@@ -33,7 +33,7 @@ Installing
 
 Please see above figure.
 
-1. Create Petri Net by CPN tools
+1. Create Petri nets by CPN tools
 2. Export Petrinet as xml file
 3. Input xml file in this library
 
@@ -66,24 +66,7 @@ print(res['topology']['jobs']) # key: job, value: task
 #  2: ['t8', 't9', 't10', 't11']}
 ```
 
-## Prerequisites
-
-- Python :: 3.x
-
-  We have already confirmed the operation of version `3.7`.
-  Other versions are also expected to work, but we have not been able to confirm.
-
-## Versioning
-
-We use pypi for versioning. For the versions available, see the tags on this repository.
-
-## Running the tests
-
-```python
-% python3 -m unittest
-```
-
-## How JSS is represented in Petri Net by CPN Tools?
+## How JSS is represented in Petri nets by CPN Tools?
 
 By drawing the figure below, this package can extract the problem structure from the Petri net.
 
@@ -91,7 +74,7 @@ E.g.) Jobs = 4, Each Task = 4, Resources = 3
 
 ![jss_job4](/images/jss_job4.jpg)
 
-### Petri Net and JSS Mapping
+### Petri nets and JSS Mapping
 
 ![jss_job4_colored](/images/jss_job4_colored.jpg)
 
@@ -113,6 +96,23 @@ E.g.) Jobs = 4, Each Task = 4, Resources = 3
 - Resource place: with a resource place token
 
   - Resource place token: Machine actually used
+
+## Prerequisites
+
+- Python :: 3.x
+
+  We have already confirmed the operation of version `3.7`.
+  Other versions are also expected to work, but we have not been able to confirm.
+
+## Versioning
+
+We use pypi for versioning. For the versions available, see the tags on this repository.
+
+## Running the tests
+
+```python
+% python3 -m unittest
+```
 
 ## References
 
