@@ -1,25 +1,25 @@
 # PxI4JSS
 
-Is is automatically generating Ising models from Petri nets for [Job Shop Scheduling Problem(JSS)](https://en.wikipedia.org/wiki/Job-shop_scheduling).
+PxI4JSS automatically generates Ising models from Petri net models for [Job Shop Scheduling (JSS)](https://en.wikipedia.org/wiki/Job-shop_scheduling) Problem.
 
 ## Overview
 
-By importing a JSS(Single Resource Type) Petri nets model created by a proprietary tool ([CPN Tools](https://cpntools.org/)), the model is automatically converted to an Ising Model. After that, The solver([PyQUBO Simulated Annealier](https://pyqubo.readthedocs.io/en/latest/)) calculates the solution.
+By importing a Petri net model for JSS (Single Resource Type) created by [CPN Tools](https://cpntools.org/), our software generates an Ising (QUBO) model for the JSS problem.
+After that, annealers for Ising (QUBO) models(e.g., [PyQUBO Simulated Annealier](https://pyqubo.readthedocs.io/en/latest/)) obtains solutions.
 
 ![job4_exp](/images/job4_exp.jpg)
 
 ## Why did we create this tool?
 
-Quantum annealing has attracted attention as a fast algorithm for solving combinatorial optimization problems.
-In this method, the combinatorial optimization problem is formulated in terms of an energy function called the [Ising model](https://en.wikipedia.org/wiki/Ising_model), which is then minimized to obtain the optimal solution.
-However, the formulation of the Ising model requires a high level of expertise.
+Quantum annealing has attracted attention as a new algorithm for solving combinatorial optimization problems. To use this method, we need to formulate the target combinatorial optimization problem as energy functions called the [Ising (QUBO) model](<(https://en.wikipedia.org/wiki/Ising_model)>).
 
-Our objective is to develop a method that makes it easy for non-specialists to formulate the Ising Model formulation.
-As a result, modeling is possible with domain knowledge only.
+However, the formulation of the Ising model requires expertise and skills.
 
-As an approach, we developed a tool that models using [Petri nets](https://en.wikipedia.org/wiki/Petri_net) and automatically generates Ising models from them.
-Petri nets are effective bipartite graphs, the property that formulas can be generated from diagrams.
-Therefore, modeling graphically with Petri nets makes it easy to formulate without formulating equations.
+Our objective is to develop a method that makes it easy for non-specialists to formulate Ising (QUBO) Models for their target problems with domain knowledge only.
+
+As an approach, we developed a method that first models the target problem with [Petri nets](https://en.wikipedia.org/wiki/Petri_net) and generates Ising (QUBO) models from them.
+
+Petri nets are a graphical modeling language. Therefore, we can graphically model our target optimization problems with Petri nets without formulating equations.
 
 ## Getting Started
 
