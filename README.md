@@ -11,7 +11,7 @@ After that, annealers for Ising (QUBO) models(e.g., [PyQUBO Simulated Annealier]
 
 ## Why did we create this tool?
 
-Quantum annealing has attracted attention as a new algorithm for solving combinatorial optimization problems. To use this method, we need to formulate the target combinatorial optimization problem as energy functions called the [Ising (QUBO) model](<(https://en.wikipedia.org/wiki/Ising_model)>).
+Quantum annealing has attracted attention as a new algorithm for solving combinatorial optimization problems. To use this method, we need to formulate the target combinatorial optimization problem as energy functions called the [Ising (QUBO) model](https://en.wikipedia.org/wiki/Ising_model).
 
 However, the formulation of the Ising model requires expertise and skills.
 
