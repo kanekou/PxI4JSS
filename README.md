@@ -66,11 +66,10 @@ print(res['topology']['jobs']) # key: job, value: task
 #  2: ['t8', 't9', 't10', 't11']}
 ```
 
-## How JSS is represented in Petri nets by CPN Tools?
+## Modeling a JSS instance by CPNTools
 
-By drawing the figure below, this package can extract the problem structure from the Petri net.
-
-E.g.) Jobs = 4, Each Task = 4, Resources = 3
+We can model JSS instances.
+The following figure shows an example with four jobs, four tasks per job, and one resource per each resource type.
 
 ![jss_job4](/images/jss_job4.jpg)
 
