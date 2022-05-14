@@ -69,7 +69,7 @@ print(res['topology']['jobs']) # key: job, value: task
 ## Modeling a JSS instance by CPNTools
 
 We can model JSS instances.
-The following figure shows an example with four jobs, four tasks per job, and one resource per each resource type.
+The following figure shows an example with four jobs, four tasks per job, and one resource(machine) per each resource type.
 
 ![jss_job4](/images/jss_job4.jpg)
 
