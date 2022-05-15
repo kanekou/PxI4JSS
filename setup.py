@@ -8,8 +8,9 @@ with open(path.join(here, 'README.md'), 'r', encoding='utf-8') as f:
 setup(
     name="PxI4JSS",
     packages=find_packages(),
-    install_requires=['snakes', 'snakes-utils', 'dwave-neal', 'pandas'],
-    version="0.1",
+    install_requires=['snakes', 'snakes-utils>=2.0.2',
+                      'dwave-neal>=0.5.7', 'pandas>=1.3.0'],
+    version="0.2.1",
     license="MIT",
     author='kanekou',
     author_email='k208580@ie.u-ryukyu.ac.jp',
