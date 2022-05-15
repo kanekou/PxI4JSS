@@ -52,7 +52,7 @@ xml_doc = cpntools4py.read_xml(xml_path)
 cpn = cpntools4py.CPN(xml_doc)
 # To snakes objects
 snakes_net = cpntools4py.to_snakes(cpn)
-# Generating ising model and solving it.
+# Generating ising model and solving it
 res = pxi4jss.main(snakes_net)
 
 # Solution
