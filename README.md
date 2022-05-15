@@ -35,18 +35,19 @@ Please see above figure.
 
 1. Create Petri nets by CPN tools
 2. Export Petrinet as xml file
-3. Input xml file in this library
+3. Input xml file and generate Petri net objects by [cpntools4py](https://pypi.org/project/cpntools4py/)
+4. Generate and solve Ising models from Petri net objects by This package
 
-### Input xml Example
+### Example
 
-Simple example. In detail, [notebook example here](https://github.com/kanekou/PxI4JSS/blob/main/example/example.ipynb).
+Example from reading XML to solving Ising model. In detail, [notebook example here](https://github.com/kanekou/PxI4JSS/blob/main/example/example.ipynb).
 
 ```python
 import pxi4jss
 import cpntools4py
 
 # Read petrinet created by CPN Tools
-xml_path = '../inputs/jss_job4.xml'
+xml_path = './inputs/jss_job4.xml'
 xml_doc = cpntools4py.read_xml(xml_path)
 cpn = cpntools4py.CPN(xml_doc)
 # To snakes objects
@@ -117,6 +118,7 @@ We use pypi for versioning. For the versions available, see the tags on this rep
 
 - https://pyqubo.readthedocs.io/en/latest/
 - https://github.com/fpom/snakes
+- https://pypi.org/project/cpntools4py/
 
 ## Contributing
 

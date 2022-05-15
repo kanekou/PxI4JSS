@@ -6,11 +6,10 @@ with open(path.join(here, 'README.md'), 'r', encoding='utf-8') as f:
     readme = f.read()
 
 setup(
-    name="PxI4JSS",
+    name="pxi4jss",
     packages=find_packages(),
-    # install_requires=['snakes', 'snakes-utils>=2.0.2',
-    #                   'dimod', 'dwave-neal', 'pandas'],
-    version="0.2.3",
+    install_requires=['snakes-utils>=2.0.2', 'dwave-neal', 'pandas', 'pyqubo'],
+    version="0.2.5",
     license="MIT",
     author='kanekou',
     author_email='k208580@ie.u-ryukyu.ac.jp',
