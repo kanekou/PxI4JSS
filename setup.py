@@ -9,7 +9,7 @@ setup(
     name="pxi4jss",
     packages=find_packages(),
     install_requires=['snakes-utils>=2.0.2', 'dwave-neal', 'pandas', 'pyqubo'],
-    version="0.2.5",
+    version="1.0",
     license="MIT",
     author='kanekou',
     author_email='k208580@ie.u-ryukyu.ac.jp',
