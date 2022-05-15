@@ -23,7 +23,7 @@ Petri nets are a graphical modeling language. Therefore, we can graphically mode
 
 ## Getting Started
 
-Installing
+Install from the [pypi](https://pypi.org/project/pxi4jss/).
 
 ```zsh
 % pip install pxi4jss
